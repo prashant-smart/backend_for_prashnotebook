@@ -18,11 +18,10 @@ app.use('/api/notes',require('./routes/notes'));
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
-app.get('/*', function (req, res) {
-   res.sendFile(path.join(__dirname, 'build', 'index.html'));
- });
+
 
 app.listen(port, () => {
-  console.log(`server started on the ${port}`)
+  if (error) throw error;
+  console.log('Server running on port ' + port);
 })
 
