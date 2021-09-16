@@ -20,8 +20,7 @@ app.get('/', (req, res) => {
 })
 
 
-app.listen(port, () => {
+app.listen(port,error  => {
   if (error) throw error;
-  console.log('Server running on port ' + port);
+  console.log(`server started on the ${port}`)
 })
-
